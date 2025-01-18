@@ -1,9 +1,5 @@
 export const VideoLibraryButtons = [
   {
-    id: 0,
-    title: "All Topics",
-  },
-  {
     id: 1,
     title: "Physics",
   },
