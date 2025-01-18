@@ -96,21 +96,14 @@ const Contact: React.FC = () => {
                 <p className="font-semibold">Social Media</p>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://www.facebook.com"
-                    passHref
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    Facebook
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/learningwithbasics"
                     passHref
                     className="text-pink-600 hover:text-pink-800"
                   >
                     Instagram
                   </Link>
                   <Link
-                    href="https://www.youtube.com"
+                    href="https://www.youtube.com/@learningwithbasics8916"
                     passHref
                     className="text-red-600 hover:text-red-800"
                   >

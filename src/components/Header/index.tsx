@@ -1,7 +1,6 @@
 "use client";
 import LWBLogo from "@/assets/images/LWB_Logo.jpg";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Menu, MenuItem } from "@mui/material";
@@ -26,18 +25,7 @@ function Header() {
       <div className="flex items-center m-2">
         <div className="hidden sm:flex items-center">
           <Link
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center justify-center h-full w-12 border-r border-gray-600"
-          >
-            <FacebookOutlinedIcon
-              sx={{ fontSize: 30, color: "white" }}
-              className="group-hover:text-blue-600"
-            />
-          </Link>
-          <Link
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/learningwithbasics"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-center h-full w-12 border-l border-r border-gray-600"
@@ -48,7 +36,7 @@ function Header() {
             />
           </Link>
           <Link
-            href="https://www.youtube.com"
+            href="https://www.youtube.com/@learningwithbasics8916"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-center h-full w-12 border-l border-r border-gray-600"
