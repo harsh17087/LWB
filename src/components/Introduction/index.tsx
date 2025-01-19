@@ -45,28 +45,32 @@ const InfoBoxWithArrow: React.FC = () => {
 
 const Introduction: React.FC = () => {
   return (
-    <div className="mt-3 introduction-container bg-[#d4ddf5] p-4 flex flex-col sm:flex-row items-center justify-evenly rounded-lg">
-      <div className="text-content flex-1 sm:w-3/5 space-y-6">
-        <p className="text-3xl sm:text-5xl font-bold mb-4">
+    <div className="mt-3 introduction-container bg-[#d4ddf5] p-4 flex flex-col sm:flex-row items-center justify-evenly rounded-lg h-[24rem] sm:h-[30rem]">
+      <div className="text-content flex-1 space-y-6 sm:w-3/5 sm:space-y-12">
+        <p className="text-2xl sm:text-5xl font-bold mb-4 text-center sm:text-left">
           Find Your Perfect Courses & Improve Your Skills
         </p>
-        <p className="text-base sm:text-lg mb-4">
+        <p className="text-sm sm:text-lg mb-4 text-center sm:text-left">
           Comprehensive video lectures, student success stories and personalized
           learning experience to help excel in your journey.
         </p>
-        <div className="button-group flex gap-4 ">
+        <div className="button-group flex flex-col sm:flex-row gap-4 items-center sm:items-start">
           <Link
             href="https://www.youtube.com/@learningwithbasics8916"
             passHref
-            className="bg-[#6c7bfe] text-white py-2 px-4 rounded-2xl cursor-pointer transition duration-300 transform hover:bg-[#6171fd] hover:scale-105 flex items-center"
+            className="bg-[#6c7bfe] text-white py-2 px-4 rounded-3xl cursor-pointer transition duration-300 transform hover:bg-[#6171fd] hover:scale-105 flex items-center text-sm sm:text-base"
           >
             Explore Video Library&nbsp;
             <ArrowCircleRightIcon />
           </Link>
-          <button className="btn-secondary">
+          <Link
+            href="#"
+            passHref
+            className="btn-secondary text-sm sm:text-base"
+          >
             Explore Success Stories&nbsp;
             <ArrowCircleRightIcon />
-          </button>
+          </Link>
         </div>
       </div>
       <div

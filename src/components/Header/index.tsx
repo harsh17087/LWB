@@ -12,7 +12,7 @@ function Header() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   return (
     <header className="flex sm:flex-row justify-between items-start p-1 bg-gradient-to-r from-[#a9b2ff] via-[#ffa9f9] to-[#a9b2ff] h-24">
-      <div className="flex items-center sm:mb-0 space-x-4 m-2">
+      <Link href="/" className="flex items-center sm:mb-0 space-x-4 m-2">
         <Image
           src={LWBLogo}
           alt="Learning with basics Logo"
@@ -20,8 +20,8 @@ function Header() {
           height={30}
           className="rounded-full"
         />
-        <span className="font-bold text-xl">Learning with Basics</span>
-      </div>
+        <span className="font-bold text-base sm:text-xl">Learning with Basics</span>
+      </Link>
       <div className="flex items-center m-2">
         <div className="hidden sm:flex items-center">
           <Link
@@ -62,7 +62,7 @@ function Header() {
               <Link href="/login">Login</Link>
             </MenuItem>
             <MenuItem onClick={() => setAnchorEl(null)}>
-              <Link href="/register">Register</Link>
+              <Link href="/login">Register</Link>
             </MenuItem>
           </Menu>
           <div className="hidden sm:flex space-x-4 ml-2">
