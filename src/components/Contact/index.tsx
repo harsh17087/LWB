@@ -18,10 +18,10 @@ const Contact: React.FC = () => {
             passHref
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mb-6 rounded w-full flex items-center justify-center"
           >
-            <WhatsAppIcon />
+            <WhatsAppIcon />&nbsp;
             Contact us on WhatsApp
           </Link>
-          <div className="p-6 rounded-lg shadow-lg mb-8 bg-gray-100">
+          <div className="p-6 rounded-lg shadow-lg mb-8">
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <div className="mb-2 flex items-center">
               <EmailOutlinedIcon style={{ fontSize: 30, color: "purple" }} />

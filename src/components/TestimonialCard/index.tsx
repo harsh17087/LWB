@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import React, { useState } from "react";
-
+import React from "react";
+import "./TestimonialCard.css";
 export interface TestimonialCardProps {
   image: StaticImageData;
   studentName: string;
@@ -18,14 +18,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   studentClass,
   stream,
   testimonial,
+  city,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const characterLimit = 200;
-
-  const shouldShowViewMore = testimonial.length > characterLimit;
-
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg p-3 h-64 transform transition-transform duration-300 hover:scale-105">
+    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg p-3 h-72 transform transition-transform duration-300 hover:scale-105">
       <div className="flex items-center mb-4">
         <Image
           src={image}
@@ -37,26 +33,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <div className="ml-4">
           <div className="text-lg font-bold">{studentName}</div>
           <div className="text-gray-600">{`${stream}, ${studentClass}`}</div>
+          {city && <div className="text-gray-600">{city}</div>}
         </div>
       </div>
-      <div
-        className={`h-36 ${isExpanded ? "overflow-y-auto" : "overflow-hidden"}`}
-      >
-        <p className="text-gray-800 h-full">
-          &quot;
-          {isExpanded
-            ? testimonial
-            : `${testimonial.slice(0, characterLimit)}...`}
-          {shouldShowViewMore && !isExpanded && (
-            <button
-              className="text-blue-500 mt-2"
-              onClick={() => setIsExpanded(true)}
-            >
-              view more
-            </button>
-          )}
-          &quot;
-        </p>
+      <div className="h-36 overflow-y-auto testimonial-content">
+        <p className="text-gray-800 h-full">&quot;{testimonial}&quot;</p>
       </div>
     </div>
   );

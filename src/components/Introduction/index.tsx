@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const InfoBadge: React.FC = () => {
   return (
-    <div className="info-badge inline-flex items-center bg-white p-2 rounded-lg shadow-md animate-float">
+    <div className="info-badge inline-flex items-center p-2 rounded-lg shadow-md animate-float">
       <SchoolIcon className="text-blue-500" />
       <div className="ml-2">
         <p className="text-sm font-bold">200+ Courses</p>
@@ -21,7 +21,7 @@ const InfoBadge: React.FC = () => {
 
 const InfoBadge2: React.FC = () => {
   return (
-    <div className="info-badge inline-flex items-center bg-white p-2 rounded-lg shadow-md animate-float">
+    <div className="info-badge inline-flex items-center p-2 rounded-lg shadow-md animate-float">
       <PeopleIcon className="text-blue-500" />
       <div className="ml-2">
         <p className="text-sm font-bold">100%</p>
@@ -33,7 +33,7 @@ const InfoBadge2: React.FC = () => {
 
 const InfoBoxWithArrow: React.FC = () => {
   return (
-    <div className="info-box-with-arrow bg-white p-4 relative">
+    <div className="info-box-with-arrow p-4 relative">
       <p className="text-sm ">
         Dear Learner&rsquo;s <br />
         Learn everything here from scratch

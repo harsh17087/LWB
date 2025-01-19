@@ -26,7 +26,7 @@ const responsive = {
 
 export default function Testimonial() {
   return (
-    <div className="p-8 bg-[#fadcf8] mt-4 mb-4 rounded-3xl">
+    <div className="p-8 mt-4 mb-4 rounded-3xl">
       <p className="text-3xl font-bold text-center mb-4">What Students Say</p>
       <p className="text-center text-lg mb-4">Hear from our students about their learning experience</p>
       <Carousel responsive={responsive}>
