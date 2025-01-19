@@ -16,12 +16,12 @@ const MethodCard: React.FC<MethodCardProps> = ({
   method3,
 }) => {
   return (
-    <div className="method-card p-4 bg-gray-50 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
-      <div className="icon mb-4 w-12 h-12 flex items-center justify-center rounded-full bg-purple-500 text-white">
-        {icon}
+    <div className="method-card p-4 bg-gray-50 rounded-lg shadow-2xl transform transition-transform duration-300 hover:scale-105 text-center">
+      <div className="icon mb-4 w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-purple-500 text-white">
+      {icon}
       </div>
       <p className="text-xl font-semibold mb-4">{heading}</p>
-      <div className="space-y-2">
+      <div className="space-y-2 ml-[20%]">
         <div className="flex items-center">
           <DoneOutlinedIcon className="text-green-500 mr-2" />
           <span>{method1}</span>

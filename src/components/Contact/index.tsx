@@ -2,6 +2,8 @@ import ConnectWithoutContactOutlinedIcon from "@mui/icons-material/ConnectWithou
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import Link from "next/link";
 import React from "react";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { whatsappContactURL } from "@/Constant/common";
 const Contact: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
@@ -9,77 +11,17 @@ const Contact: React.FC = () => {
       <h2 className="text-xl mb-8 text-center">
         We&apos;d love to hear from you!
       </h2>
-      <div className="flex flex-wrap -mx-4">
-        <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-          <form className="p-6 rounded-lg shadow-lg bg-gray-100">
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="fullName"
-              >
-                Full Name
-              </label>
-              <input
-                className="border border-gray-400 appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="fullName"
-                type="text"
-                placeholder="Full Name"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="email"
-              >
-                Email Address
-              </label>
-              <input
-                className="border border-gray-400 appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email"
-                type="email"
-                placeholder="Email Address"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="phone"
-              >
-                Phone Number
-              </label>
-              <input
-                className="border border-gray-400 appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone"
-                type="tel"
-                placeholder="Phone Number"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="message"
-              >
-                Message
-              </label>
-              <textarea
-                className="border border-gray-400 appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="message"
-                placeholder="Your message"
-                rows={4}
-              />
-            </div>
-            <div className="flex items-center justify-between">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
-                type="button"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
-        <div className="w-full md:w-1/2 px-4 ">
-          <div className=" p-6 rounded-lg shadow-lg mb-8 bg-gray-100">
+      <div className="flex flex-wrap justify-center">
+        <div className="w-full md:w-1/2 px-4">
+          <Link
+            href={`${whatsappContactURL}`}
+            passHref
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mb-6 rounded w-full flex items-center justify-center"
+          >
+            <WhatsAppIcon />
+            Contact us on WhatsApp
+          </Link>
+          <div className="p-6 rounded-lg shadow-lg mb-8 bg-gray-100">
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <div className="mb-2 flex items-center">
               <EmailOutlinedIcon style={{ fontSize: 30, color: "purple" }} />
@@ -118,17 +60,6 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className=" p-6 rounded-lg shadow-lg bg-gray-100">
-            <h3 className="text-xl font-bold mb-4">FAQs</h3>
-            <p className="mb-2 font-semibold">Q: How can I contact you?</p>
-            <p className="mb-4">A: You can contact us via email or phone.</p>
-            <p className="mb-2 font-semibold">
-              Q: What are your working hours?
-            </p>
-            <p className="mb-4">
-              A: Our working hours are 9 AM to 5 PM, Monday to Friday.
-            </p>
           </div>
         </div>
       </div>

@@ -1,18 +1,14 @@
-"use client";
+'use client'
 import LWBLogo from "@/assets/images/LWB_Logo.jpg";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { Menu, MenuItem } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 function Header() {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   return (
-    <header className="flex sm:flex-row justify-between items-start p-1 bg-gradient-to-r from-[#a9b2ff] via-[#ffa9f9] to-[#a9b2ff] h-24">
-      <Link href="/" className="flex items-center sm:mb-0 space-x-4 m-2">
+    <header className="sticky top-0 mt-4 flex sm:flex-row justify-between items-center p-1 sm:mx-4 my-4 shadow-lg shadow-t-lg rounded-3xl bg-white z-50">
+      <Link href="/" className="flex items-center sm:mb-0 space-x-4 m-1">
         <Image
           src={LWBLogo}
           alt="Learning with basics Logo"
@@ -28,10 +24,10 @@ function Header() {
             href="https://www.instagram.com/learningwithbasics"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center h-full w-12 border-l border-r border-gray-600"
+            className="group flex items-center justify-center h-full w-12 border-gray-600"
           >
             <InstagramIcon
-              sx={{ fontSize: 30, color: "white" }}
+              sx={{ fontSize: 30, color: "#F56040" }}
               className="group-hover:text-orange-600"
             />
           </Link>
@@ -42,31 +38,14 @@ function Header() {
             className="group flex items-center justify-center h-full w-12 border-l border-r border-gray-600"
           >
             <YouTubeIcon
-              sx={{ fontSize: 35, color: "white" }}
+              sx={{ fontSize: 35, color: "red" }}
               className="group-hover:text-red-600"
             />
           </Link>
         </div>
         <div className="relative flex items-center">
-          <AccountCircleOutlinedIcon
-            sx={{ fontSize: 30, color: "white" }}
-            className="cursor-pointer ml-1 hover:text-black sm:hidden"
-            onClick={(e) => setAnchorEl(e.target as HTMLElement)}
-          />
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={() => setAnchorEl(null)}
-          >
-            <MenuItem onClick={() => setAnchorEl(null)}>
-              <Link href="/login">Login</Link>
-            </MenuItem>
-            <MenuItem onClick={() => setAnchorEl(null)}>
-              <Link href="/login">Register</Link>
-            </MenuItem>
-          </Menu>
-          <div className="hidden sm:flex space-x-4 ml-2">
-            <Link href="/login" className="text-white hover:text-black">
+          <div className=" sm:flex space-x-4 ml-2">
+            <Link href="/login" className="text-black hover:text-blue-500">
               Login / Register
             </Link>
           </div>
