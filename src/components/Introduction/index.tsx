@@ -69,7 +69,7 @@ const Introduction: React.FC = () => {
               <ArrowCircleRightIcon />
             </Link>
             <Link
-              href="#"
+              href="#testimonials"
               passHref
               className="btn-secondary text-sm sm:text-base"
             >
