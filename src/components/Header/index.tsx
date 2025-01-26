@@ -1,9 +1,10 @@
-'use client'
+"use client";
 import LWBLogo from "@/assets/images/LWB_Logo.jpg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Image from "next/image";
 import Link from "next/link";
+import ColorModeSelect from "../LoginSignup/ColorModeSelect";
 
 function Header() {
   return (
@@ -16,8 +17,13 @@ function Header() {
           height={30}
           className="rounded-full"
         />
-        <span className="font-bold text-base sm:text-xl">Learning with Basics</span>
+        <span className="font-bold text-base sm:text-xl">
+          Learning with Basics
+        </span>
       </Link>
+        <ColorModeSelect
+          sx={{ position: "fixed", top: "1rem", right: "1rem" }}
+        />
       <div className="flex items-center m-2">
         <div className="hidden sm:flex items-center">
           <Link
